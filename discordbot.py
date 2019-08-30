@@ -1,6 +1,7 @@
 from discord.ext import commands
 import os
 import traceback
+import random
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -27,8 +28,26 @@ async def manko(ctx):
 
 
 @bot.command()
+async def debug_sako(ctx):
+    method_dir = dir()
+    for i in method_dir:
+        await ctx.send(i)
+
+@bot.command()
 async def uemura(ctx):
-    await ctx.send('うえむらのちんちんは小さいよね、、、')
+    sentakushi = random.randint(0,2)
+    if sentakushi == 0:
+        await ctx.send('うえむらのちんちんは小さいよね、、、')
+    elif sentakushi == 1:
+        await ctx.send('うえむらのちんちんは普通だよね、、、')
+    elif sentakushi == 2:
+        await ctx.send('うえむらのちんちんはでっかい！！！！')
+
+
+
+@bot.command()
+async def Takashi_update(ctx):
+    await ctx.send('うえむらのちんちんの大きさが確率できまるようになりました')
 
 
 @bot.command()
