@@ -5,7 +5,8 @@ import os
 import random
 
 # bot = commands.Bot(command_prefix='/')
-token = os.environ['DISCORD_BOT_TOKEN']
+# token = os.environ['DISCORD_BOT_TOKEN']
+TOKEN = 'NjE2OTMxMjQxNTg0NzU0Njg4.XWkylQ.CoZ6ZNZm1Y279-5a6GAl7qqeLuE'
 client = discord.Client()
 
 
