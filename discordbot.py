@@ -8,11 +8,13 @@ bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 client = discord.Client()
 
+
 @client.event
 async def on_ready():
     CHANNEL_ID = 615880185136545792
     channel = client.get_channel(CHANNEL_ID)
     await channel.send('おれが帰ってきたぞ！')
+
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -74,3 +76,4 @@ async def on_message(message):
         await message.channel.send(m)
 
 bot.run(token)
+client.run(token)
