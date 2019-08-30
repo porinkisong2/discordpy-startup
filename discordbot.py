@@ -24,6 +24,10 @@ async def manko(ctx):
     await ctx.send('まんこ！')
 
 @bot.command()
+async def uemura(ctx):
+    await ctx.send('うえむらのちんちんは小さいよね、、、')
+
+@bot.command()
 async def whoTakashi(ctx):
     await ctx.send('僕は小学三年生のクソガキAIたかし！\n「/otintin」と入力すると「おっぱい！」を返し、「/oppai」と入力すると「おちんちん！」と返す素朴なbotです。\n通常の９歳児と異なりHeroku上で生きているので睡眠を必要としません。')
 
