@@ -1,10 +1,12 @@
 from discord.ext import commands
+import discord
 import os
 import traceback
 import random
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
+client = discord.Client()
 
 
 @bot.event
@@ -33,16 +35,16 @@ async def debug_sako(ctx):
     for i in method_dir:
         await ctx.send(i)
 
+
 @bot.command()
 async def uemura(ctx):
-    sentakushi = random.randint(0,2)
+    sentakushi = random.randint(0, 2)
     if sentakushi == 0:
         await ctx.send('うえむらのちんちんは小さいよね、、、')
     elif sentakushi == 1:
         await ctx.send('うえむらのちんちんは普通だよね、、、')
     elif sentakushi == 2:
         await ctx.send('うえむらのちんちんはでっかい！！！！')
-
 
 
 @bot.command()
@@ -58,7 +60,7 @@ async def whoTakashi(ctx):
                    '通常の９歳児と異なりHeroku上で生きているので睡眠を必要としません。')
 
 
-@bot.command()
+@client.event
 async def on_message(message):
     if message.content.startwith("help"):
         m = ('たかしの持っている関数は以下の通りだよ！\n /otintin(), ' +
