@@ -34,7 +34,9 @@ async def uemura(ctx):
     elif sentakushi == 2:
         await ctx.send('うえむらのちんちんはでっかい！！！！')
 
-
+@bot.command()
+async def Takashi_update(ctx):
+    await ctx.send('うえむらのちんちんの大きさが確率できまるようになりました')
 
 @bot.command()
 async def whoTakashi(ctx):
