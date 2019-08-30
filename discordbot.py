@@ -25,6 +25,12 @@ async def manko(ctx):
     await ctx.send('まんこ！')
 
 @bot.command()
+async def debug_sako(ctx):
+    method_dir = dir()
+    for i in method_dir
+    await ctx.send(i)
+
+@bot.command()
 async def uemura(ctx):
     sentakushi = random.randint(0,2)
     if sentakushi == 0:
@@ -33,6 +39,8 @@ async def uemura(ctx):
         await ctx.send('うえむらのちんちんは普通だよね、、、')
     elif sentakushi == 2:
         await ctx.send('うえむらのちんちんはでっかい！！！！')
+
+
 
 @bot.command()
 async def Takashi_update(ctx):
