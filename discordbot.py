@@ -27,8 +27,8 @@ async def manko(ctx):
 @bot.command()
 async def debug_sako(ctx):
     method_dir = dir()
-    for i in method_dir
-    await ctx.send(i)
+    for i in method_dir:
+        await ctx.send(i)
 
 @bot.command()
 async def uemura(ctx):
